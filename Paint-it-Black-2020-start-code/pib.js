@@ -68,8 +68,13 @@ function init() {
 
 function readJson(jsonString) {
   jsonObj = JSON.parse(jsonString);
-  // hier komt jouw code
+  for (i = 0; i < 80; i++) {
+    drawing[i].x = jsonObj[i].x;
+    drawing[i].y = jsonObj[i].y;
+    drawing[i].color = jsonObj[i].color;
+    drawing[i].draw(context);
   }
+}
 
 init();
 
